@@ -1,6 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&family=Ubuntu:wght@300&display=swap');
 
+
 body {
     line-height: 1.5;
     font-family: 'Montserrat', sans-serif;
@@ -65,6 +66,10 @@ h2 {
     margin: 0 2px;
 }
 
+.fa-star:before {
+    content: "\f005";
+}
+
 .fa {
     display: inline-block;
     font: normal normal normal 14px/1 FontAwesome;
@@ -72,13 +77,6 @@ h2 {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-}
-
-.shortcode-swiftscore {
-    display: block;
-    position: relative;
-    text-align: center;
-    padding: 20px 10px 10px 10px;
 }
 
 .insurance_pannel {
@@ -127,67 +125,51 @@ h2 {
     width: 50%;
 }
 
-/* .shortcode-swiftscore {
-    display: block;
-    position: relative;
-    text-align: center;
-    padding: 20px 10px 10px 10px;
-} */
-
-/* .shortcode-swiftscore .star_rating {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-} */
-
-/* .shortcode-swiftscore .star_rating i {
+.shortcode-swiftscore ul.score {
     display: inline-block;
-    font-size: 20px;
-    color: #1A0DAB;
-    margin: 0 2px;
-} */
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+}
 
-/* .shortcode-swiftscore ul.score li {
+.shortcode-swiftscore ul.score li {
     display: block;
     margin: 0 !important;
     padding: 0 !important;
     list-style: none !important;
-} */
+}
 
-/* .shortcode-swiftscore ul.score a {
+.shortcode-swiftscore ul.score a {
     font-weight: 700;
     font-size: 13px;
     color: #DB5155;
     cursor: pointer;
-} */
+}
 
-/* .fa {
+.fa {
     display: inline-block;
     font: normal normal normal 14px/1 FontAwesome;
     font-size: inherit;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-} */
-
-/* .fa-angle-down:before {
-    content: "\f107";
-} */
-
-.shortcode-swiftscore .rank {
-    display: inline-block;
-    font-weight: 700;
-    font-size: 22px;
-    color: #1A1E41;
 }
 
-.shortcode-swiftscore ul.score {
+.fa-angle-down:before {
+    content: "\f107";
+}
+
+.fa {
     display: inline-block;
-    margin: 0 !important;
-    padding: 0 !important;
-    list-style: none !important;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.sf-with-ul:hover + .tooltip {
+    display: block;
 }
 
 .shortcode-swiftscore .tooltip {
@@ -206,6 +188,20 @@ h2 {
     left: 50%;
     margin-left: -125px;
     border-radius: 3px;
+}
+
+.shortcode-swiftscore .rank {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 22px;
+    color: #1A1E41;
+}
+
+.shortcode-swiftscore ul.score {
+    display: inline-block;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
 }
 
 .gb-container-divider {
@@ -247,6 +243,11 @@ h2 {
     padding: 0;
 }
 
+small{
+    line-height: 1.1em !important;
+    font-size: 10px;
+    display: block;
+}
 
 .insurance_pannel .info small {
     line-height: 1.1em !important;
@@ -325,21 +326,91 @@ a.gb-button-cfe7c08f .gb-icon {
 .insurance_pannel_best {
     position: relative;
 }
-/* 
-@media (min-width: 1025px) {
-    .gb-button-wrapper-btn > .gb-button {
-        flex: 1;
-    }
+
+
+/* ---------------- media queries------------ */
+
+@media (min-width: 375px) {
+    .gb-container .gb-container-main {
+    width: 100%;
+    padding: 0px 20px 0px 20px;
      }
+    }
 
 @media (max-width: 767px) {
-.insurance_pannel:before, .insurance_pannel_best:before {
+    .insurance_pannel:before, .insurance_pannel_best:before {
     left: -7px;
-}
- }
-
- @media (min-width: 1025px) {
-    .gb-grid-wrapper > div.gb-grid-column- {
-        padding-bottom: 0;
     }
-     } */
+
+    .gb-container .gb-container-main{
+    width: 100%;
+    padding: 0px 20px 0px 20px;
+}
+    
+.gb-container-bbb > .gb-inside-container {
+    padding: 30px 25px 25px 15px;
+}
+    
+.gb-grid-wrapper > .gb-grid-column-cont {
+    width: 100%;
+    padding: 0px 20px 0px 20px;
+}
+
+.gb-grid-column-div > .gb-inside-container {
+    padding-bottom: 0;
+    padding: 0px 20px 0px 20px;
+}
+
+.gb-grid-wrapper > .gb-grid-column-9dfac986 {
+    width: 60%;
+    padding: 0px 20px 0px 20px;
+} 
+
+.gb-grid-wrapper > .gb-grid-column-e0b34fd1 {
+    width: 40%;
+    padding: 0px 20px 0px 20px;
+}  
+
+.shortcode-swiftscore {
+    padding: 10px;
+    padding: 0px 20px 0px 20px;
+}
+
+.shortcode-swiftscore .star_rating i {
+    font-size: 16px;
+}
+
+.shortcode-swiftscore ul.score a {
+    font-size: 11px;
+}
+
+.shortcode-swiftscore .tooltip {
+    left: auto;
+    right: 0;
+}
+
+.gb-grid-wrapper > .gb-grid-column-aaa {
+    width: 30%;
+}
+
+.gb-grid-wrapper > .gb-grid-column-abc {
+    width: 30%;
+}
+
+.gb-grid-wrapper > .gb-grid-column-ccc {
+    width: 40%;
+}
+
+.gb-grid-wrapper > .gb-grid-column-con {
+    width: 100%;
+}
+
+.gb-inside-container {
+    padding: 20px 0 30px;
+}
+
+.gb-grid-wrapper > .gb-grid-column-btn {
+    width: 100%;
+}
+
+}
